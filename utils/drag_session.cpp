@@ -46,6 +46,11 @@ void drag_session::BeginDrag(HWND hwnd, POINT cursorScreen) {
     g_dragWnd = hwnd;
     g_dragging = true;
 
+    if (IsZoomed(hwnd))
+    {
+        ShowWindow(hwnd, SW_RESTORE);
+    }
+
     SetWindowPos(hwnd, HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
 }
 
