@@ -73,3 +73,4 @@ void drag_session::EndDrag() {
     g_dragging = false;
     g_dragWnd = nullptr;
 }
+
